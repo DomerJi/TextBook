@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dp">
+
+    <RelativeLayout
+        android:id="@+id/item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_catalogue_selector">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:minWidth="60dp"
+            android:padding="@dimen/text_padding"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            tools:text="Title" />
+
+
+        <TextView
+            android:id="@+id/tv_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="right|center_vertical"
+            android:minWidth="40dp"
+            android:padding="@dimen/text_padding"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            tools:text="Page" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_name"
+            android:gravity="left|center_vertical"
+            android:maxWidth="290dp"
+            android:padding="@dimen/text_padding"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            tools:text="DcDescDescDescDescDescD" />
+
+        <TextView
+            android:id="@+id/tv_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/tv_page"
+            android:layout_toRightOf="@id/tv_desc"
+            android:gravity="right|center_vertical"
+            android:lines="1"
+            android:minWidth="30dp"
+            android:paddingTop="@dimen/text_padding"
+            android:paddingBottom="@dimen/text_padding"
+            android:text=" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+            android:textColor="@color/colorWhite50"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_file_display"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/tv_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_page_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="2dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            tools:text="/" />
+
+        <TextView
+            android:id="@+id/tv_page_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="2dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            tools:text="100" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_catalogue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@drawable/item_catalogue_selector"
+            android:padding="@dimen/btn_padding"
+            android:src="@drawable/ic_menu"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_page"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_catalogues"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_page"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tab_bottom_background"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_vertical_margin"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_orientation"
+            android:layout_width="@dimen/tab_bottom_width"
+            android:layout_height="@dimen/tab_bottom_width"
+            android:background="@drawable/item_catalogue_selector"
+            android:padding="@dimen/text_padding" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_width_height"
+            android:layout_width="@dimen/tab_bottom_width"
+            android:layout_height="@dimen/tab_bottom_width"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/item_catalogue_selector"
+            android:padding="@dimen/text_padding" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_night"
+            android:layout_width="@dimen/tab_bottom_width"
+            android:layout_height="@dimen/tab_bottom_width"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/item_catalogue_selector"
+            android:padding="@dimen/text_padding" />
+
+    </LinearLayout>
+
+</RelativeLayout>
